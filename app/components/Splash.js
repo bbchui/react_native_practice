@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, TouchableHighlight} from 'react-native';
 
 export default class Splash extends Component{
   constructor(props) {
@@ -7,10 +7,17 @@ export default class Splash extends Component{
     this.state = {name: "Brandon Chui"}
   }
 
+  onPress() {
+    console.log('Area Pressed');
+  }
+
   render() {
     return(
       <View style={styles.myView}>
-        <Text style={styles.myText}>{this.state.name}</Text>
+        <TouchableHighlight onPress={this.onPress}>
+          <Text style={styles.myText}>{this.state.name}</Text>
+        </TouchableHighlight>
+
         <Text style={styles.myText}>Box 2</Text>
         <Text style={styles.myText}>Box 3</Text>
       </View>
