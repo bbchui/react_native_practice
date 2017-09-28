@@ -23,29 +23,29 @@ export default class Splash extends Component{
     return(
       <View style={styles.mainView}>
 
-        <View style={styles.myView}>
-          <TouchableHighlight
-              onPress={this.onPress}
-              underlayColor="blue">
+        <TouchableHighlight
+          onPress={this.onPress}
+          underlayColor="blue">
+          <View style={styles.myView}>
             <Text style={styles.myText}>{this.state.name}</Text>
-          </TouchableHighlight>
-        </View>
+          </View>
+        </TouchableHighlight>
 
-        <View style={styles.myView}>
-          <TouchableHighlight
-              onPress={this.onPress}
-              underlayColor="blue">
-            <Text style={styles.myText}>Box 2</Text>
-          </TouchableHighlight>
-        </View>
+        <TouchableHighlight
+          onPress={this.onPress2}
+          underlayColor="blue">
+          <View style={styles.myView}>
+              <Text style={styles.myText}>Box 2</Text>
+          </View>
+        </TouchableHighlight>
 
-        <View style={styles.myView}>
-          <TouchableHighlight
-              onPress={this.onPress}
-              underlayColor="blue">
-            <Text style={styles.myText}>Box 3</Text>
-          </TouchableHighlight>
-        </View>
+        <TouchableHighlight
+          onPress={this.onPress3}
+          underlayColor="blue">
+          <View style={styles.myView}>
+              <Text style={styles.myText}>Box 3</Text>
+          </View>
+        </TouchableHighlight>
 
       </View>
     );
@@ -56,7 +56,10 @@ export default class Splash extends Component{
 
 const styles = StyleSheet.create({
   mainView: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    height: 100,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
   myText: {
@@ -70,6 +73,8 @@ const styles = StyleSheet.create({
   myView: {
     justifyContent: 'center',
     borderColor: 'black',
-    borderStyle: 'solid'
+    borderStyle: 'solid',
+    height: 50,
+    flex: 1
   }
 })

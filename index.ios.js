@@ -28,10 +28,10 @@ export default class myapp extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+
     backgroundColor: '#F5FCFF',
+    alignItems: 'center',
+    marginTop: 250
   },
   welcome: {
     fontSize: 20,
@@ -57,3 +57,7 @@ AppRegistry.registerComponent('myapp', () => myapp);
 //   Press Cmd+R to reload,{'\n'}
 //   Cmd+D or shake for dev menu
 // </Text>
+
+// flex: 1,
+// justifyContent: 'center',
+// alignItems: 'center',
